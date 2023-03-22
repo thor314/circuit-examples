@@ -2,9 +2,9 @@
 // Highly inspired from tornado cash https://github.com/tornadocash/tornado-core/tree/master/circuits
 pragma circom 2.0.0;
 
-include "../../node_modules/circomlib/circuits/poseidon.circom";
-include "../../node_modules/circomlib/circuits/bitify.circom";
-include "../../node_modules/circomlib/circuits/comparators.circom";
+include "circomlib/circuits/poseidon.circom";
+include "circomlib/circuits/bitify.circom";
+include "circomlib/circuits/comparators.circom";
 
 // if s == 0 returns [in[0], in[1]]
 // if s == 1 returns [in[1], in[0]]
@@ -47,3 +47,5 @@ template VerifyMerklePath(levels) {
 
     root === computedPath[levels - 1];
 }
+
+component main = VerifyMerklePath(32);
