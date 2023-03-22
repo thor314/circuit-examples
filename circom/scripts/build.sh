@@ -5,7 +5,6 @@ if [[ ! -d target ]] ; then
 fi
 
 circom $MY_CIRCUIT.circom --r1cs --wasm --sym -o target/
-rm pot12_0000.ptauo # trash
 
 cd target/${MY_CIRCUIT}_js
 if [[ ! -f input.json ]] ; then 
