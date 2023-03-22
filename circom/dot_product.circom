@@ -37,6 +37,7 @@ template Adder(N) {
 template DotProduct(N) {
   signal input a[N];
   signal input b[N];
+  signal input expect;
   signal output out;
   signal products[N];
   component adder = Adder(N);
@@ -51,7 +52,7 @@ template DotProduct(N) {
 
   adder.in <== products;
   out <== adder.out;
-
+  out === expect;
 }
 
 component main = DotProduct(2);
