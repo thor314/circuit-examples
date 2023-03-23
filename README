@@ -14,5 +14,10 @@ cargo install --path circom
 npm install -g snarkjs
 ``` 
 
-Once you've written a circuit, compile, choose something to prove, and prove it. See `circom/scripts` for examples.
+Once you've written a circuit, compile, choose something to prove, and prove it. See `circom-dotproduct/scripts` for an example
+compilation.
+
+## Noir
+
+## Risc 0
 
