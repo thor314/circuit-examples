@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+use dotproduct_core::Args;
 use methods::{MULTIPLY_ELF, MULTIPLY_ID};
 use risc0_zkvm::serde::{from_slice, to_vec};
 use risc0_zkvm::Prover;
-use dotproduct_core::Args;
 
 fn main() {
     // Pick two numbers
@@ -31,9 +31,9 @@ fn main() {
     );
 
     // Next we send a & b to the guest
-    prover.add_input_u32_slice(&to_vec(&args).expect(
-        "Arguments should serialize into a vector of bytes",
-    ));
+    prover.add_input_u32_slice(
+        &to_vec(&args).expect("Arguments should serialize into a vector of bytes"),
+    );
 
     // Run prover & generate receipt
     let receipt = prover.run()
