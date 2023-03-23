@@ -18,6 +18,9 @@ Once you've written a circuit, compile, choose something to prove, and prove it.
 compilation.
 
 ## Noir
+Installation:
+```bash
+
 
 ## Risc 0
 
