@@ -1,5 +1,5 @@
 [package]
-name = "waldo-methods-guest"
+name = "merkle-methods-guest"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,9 +9,8 @@ edition = "2021"
 risc0-build = "0.12"
 
 [dependencies]
-image = { version = "0.24.5", default-features = false }
 risc0-zkvm = { version = "0.12", default-features = false, features = ["std"] }
-waldo-core = { path = "../../core" }
+merkle-core = { path = "../../core" }
 
 [profile.release]
 lto = true

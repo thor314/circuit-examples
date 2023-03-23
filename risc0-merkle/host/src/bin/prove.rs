@@ -15,8 +15,8 @@
 use std::error::Error;
 
 use risc0_zkvm::{serde, Prover};
-use waldo_core::{Journal, MerkleTree, PrivateInput};
-use waldo_methods::{MERKLE_GUEST_ELF, MERKLE_GUEST_ID};
+use merkle_core::{Journal, MerkleTree, PrivateInput};
+use merkle_methods::{MERKLE_GUEST_ELF, MERKLE_GUEST_ID};
 
 fn main() -> Result<(), Box<dyn Error>> {
     env_logger::init();
@@ -31,7 +31,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let mut prover = Prover::new(MERKLE_GUEST_ELF, MERKLE_GUEST_ID)?;
 
-    // Give the private input to the guest, including Waldo's location.
+    // Give the private input to the guest
     let input = PrivateInput {
         root: merkle_tree.root(),
         items,

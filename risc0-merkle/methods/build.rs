@@ -18,7 +18,7 @@ use risc0_build::GuestOptions;
 
 fn main() {
     risc0_build::embed_methods_with_options(HashMap::from([(
-        "waldo-methods-guest",
+        "merkle-methods-guest",
         GuestOptions {
             features: vec![],
             std: true,

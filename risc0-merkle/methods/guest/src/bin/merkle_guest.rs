@@ -16,7 +16,7 @@
 // #![no_std]
 
 use risc0_zkvm::guest::env;
-use waldo_core::{Journal, MerkleTree, PrivateInput};
+use merkle_core::{Journal, MerkleTree, PrivateInput};
 
 risc0_zkvm::guest::entry!(main);
 
