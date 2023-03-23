@@ -1,0 +1,5 @@
+[package]
+authors = ["Thor K"]
+compiler_version = "0.1"
+
+[dependencies]

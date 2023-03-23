@@ -12,6 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+use std::collections::hash_map::HashMap;
+
+use risc0_build::GuestOptions;
+
 fn main() {
-    risc0_build::embed_methods();
+    risc0_build::embed_methods_with_options(HashMap::from([(
+        "waldo-methods-guest",
+        GuestOptions {
+            features: vec![],
+            std: true,
+        },
+    )]));
 }
