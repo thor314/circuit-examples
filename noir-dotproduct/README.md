@@ -1,6 +1,6 @@
 # Noir
 Build: `nargo check`
-Prove: set up inputs in `Prover.toml` and run `nargo prove`. `nargo prove --show-output p` to show println logs.
+Prove: set up inputs in `Prover.toml` and run `nargo prove p -v`. `nargo prove --show-output p` to show println logs.
 Verify: `nargo verify p`
 
 ## Notes on Noir
