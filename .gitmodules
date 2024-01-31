@@ -1,3 +1,3 @@
 [submodule "circomlib"]
-	path = circomlib
+	path = circom-merkle-proof/circomlib
 	url = https://github.com/iden3/circomlib
