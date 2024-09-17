@@ -11,6 +11,13 @@ if [[ ! -f input.json ]] ; then
     echo -e "{\n // Put your witness input here\n}" > input.json
     vi input.json
 fi
+# example witness for Multiplier2:
+# {
+#  "a": 3,
+#  "b": 4
+###  "c": 12 <-- do not include an output value (facepalm)
+# }
+
 # Generate Witness
 node generate_witness.js $MY_CIRCUIT.wasm input.json witness.wtns
 # Start Trusted Setup
